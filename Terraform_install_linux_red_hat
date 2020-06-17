@@ -1,0 +1,24 @@
+Step 1 : Install wget and unzip if not installed already
+    sudo yum install wget unzip
+    
+Step 2 : Download the package from https://www.terraform.io/downloads.html
+    sudo wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
+    
+Step 3 : Unzip the package
+    sudo unzip terraform_0.12.26_linux_amd64.zip 
+
+Step 4 : Create a directory "Terraform"
+    sudo mkdir Terraform
+    
+Step 5 : Move the unzipped package to the "Terraform" directory.
+    sudo mv terraform Terraform
+    
+Step 6 : Create the environment variables.
+    export PATH=/home/ec2-user/Terraform/:$PATH
+    
+Step 7 : Verify the installation
+    terraform --version / terraform -v
+    
+ All done!!!
+    
+    
