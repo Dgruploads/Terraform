@@ -7,7 +7,7 @@ variable "name" {
 variable "region" {
 	description = "Region to launch the instance"
 	type        = string
-	default     = "t2.micro"
+	default     = "us-east-1"
 }
 
 variable "instance_count" {
