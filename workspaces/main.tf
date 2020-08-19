@@ -13,7 +13,7 @@ resource "aws_instance" "this" {
 resource "aws_security_group" "allow_http" {
   name                   = var.name
   description            = var.name
-  vpc_id                 = "vpc-06a5dd7cbb70bcf5e"
+  vpc_id                 = "vpc-00f6f586c20bfc847"
 
   ingress {
     description          = "Allow http access"
