@@ -1,4 +1,4 @@
-provider "aws" {
+rprovider "aws" {
   profile = "default"
   region  = "us-east-1"
 }
@@ -20,6 +20,6 @@ connection {
 }  
 
 provisioner "local-exec" {
-	command = "bootstrap-cluster.sh ${join(" ",aws_instance.cluster.*.private_ip)}"
+	command = "terraform.sh ${join(" ",aws_instance.cluster.*.private_ip)}"
   }
 }
