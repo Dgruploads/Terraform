@@ -1,7 +1,5 @@
 provider "aws" {
-  AWS_ACCESS_KEY_ID = $AWS_ACCESS_KEY_ID
-  AWS_SECRET_ACCESS_KEY = $AWS_SECRET_ACCESS_KEY
-  region  = var.region
+ region  = var.region
 }
 
 resource "aws_instance" "this" {
