@@ -2,6 +2,7 @@ resource "aws_instance" "web_instance" {
   instance_type = var.ec2_instance_type
   ami           = var.ec2_ami
   key_name      = "${data.aws_key_pair.existing_key_pair.key_name}"
+  tags          = local.common_tags
 
   provisioner "file" {
     source      = "script.sh"
