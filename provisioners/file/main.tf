@@ -10,7 +10,7 @@ resource "aws_instance" "web_instance" {
     connection {
       type = "ssh"
       user = "ubuntu"
-      private_key = "${file("/home/ubuntu/remote_exec/linux_key_1.pem")}"
+      private_key = "${file("/home/ubuntu/remote_exec/new_key.pem")}"
       host = "${aws_instance.web_instance.public_ip}"
       port = 22
     }
