@@ -12,3 +12,8 @@ variable "ec2_key_name" {
   type = string
   description = "Key pair to attach to the ec2 instance"
 }
+
+variable "ec2_region" {
+  type = string
+  description = "Region to create the resoures"
+}
