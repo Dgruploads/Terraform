@@ -8,4 +8,4 @@ db_name           = "depends_on_example"
 db_username       = "db_username"
 db_password       = "db_password"
 skip_snapshot     = true
-s3_bukcet_name    = "dgruploads-depends-on-example"
+s3_bucket_name    = "dgruploads-depends-on-example"
