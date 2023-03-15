@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "example_bucket" {
-  bucket = var.s3_bukcet_name
+  bucket = var.s3_bucket_name
+  tags   = local.common_tags
 }
 
 resource "aws_db_instance" "example_db" {
@@ -10,6 +11,7 @@ resource "aws_db_instance" "example_db" {
   username            = var.db_username
   password            = var.db_password
   skip_final_snapshot = var.skip_snapshot
+  tags                = local.common_tags
 }
 
 resource "aws_instance" "example_instance" {
