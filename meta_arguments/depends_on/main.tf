@@ -16,4 +16,6 @@ resource "aws_instance" "example_instance" {
   instance_type = var.ec2_instance_type
   ami           = var.ec2_image
   tags          = local.common_tags
+  
+  depends_on    = [aws_s3_bucket.example_bucket, aws_db_instance.example_db]
 }
