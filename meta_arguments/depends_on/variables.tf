@@ -47,3 +47,8 @@ variable "skip_snapshot" {
   description = "Specify if to skip snapshot creation"
   type        = bool
 }
+
+variable "s3_bucket_name" {
+  description = "Specify the name of the bucket to create"
+  type        = string
+}
