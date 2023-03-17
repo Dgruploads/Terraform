@@ -6,4 +6,5 @@ resource "aws_instance" "lifecycle_example_one" {
   
   lifecycle {
     create_before_destroy = true
+  }
 }
