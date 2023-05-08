@@ -12,8 +12,3 @@ variable "image_id" {
   description = "Image AMI to create the resources"
   type        = string
 }
-
-variable "role_name" {
-  description = "Role name to attach"
-  type        = string
-}
