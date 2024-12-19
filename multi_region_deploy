@@ -1,0 +1,31 @@
+provider "aws" {
+  region = "us-east-1"
+  alias  = "useast1"
+}
+
+provider "aws" {
+  region = "ap-south-1"
+  alias  = "apsouth1"
+}
+
+resource "aws_s3_bucket" "demo_bucket_1" {
+  provider = aws.useast1
+  bucket   = "dgruploads-demo-1"
+}
+
+resource "aws_s3_bucket" "demo_bucket_2" {
+  provider = aws.apsouth1
+  bucket   = "dgruploads-demo-2"
+}
+
+resource "aws_instance" "demo_instance_1" {
+  provider      = aws.apsouth1
+  instance_type = "t2.micro"
+  ami           = "ami-04a37924ffe27da53"
+}
+
+resource "aws_instance" "demo_instance_2" {
+  provider	= aws.useast1
+  instance_type = "t2.micro"
+  ami           = "ami-01816d07b1128cd2d"
+}
